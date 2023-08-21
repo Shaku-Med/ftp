@@ -138,6 +138,36 @@
      }
  })
 
+ app.get(`/enc/:text/:key`, async(req, res) => {
+     res.send({
+         encrypted: await Medzy.enc(req.params.text, req.params.key)
+     })
+ })
+
+ app.get(`/dec/:text/:key`, async(req, res) => {
+     res.send({
+         decrypted: await Medzy.dec(req.params.text, req.params.key)
+     })
+ })
+
+ app.get(`/ai/image/:prompt`, async(req, res) => {
+     res.send({
+         decrypted: await Medzy.GAImage(req.params.prompt)
+     })
+ })
+
+ app.get(`/ai/text/:prompt`, async(req, res) => {
+     res.send({
+         decrypted: await Medzy.AIChat(req.params.prompt)
+     })
+ })
+
+ app.get(`/ai/sound/:prompt`, async(req, res) => {
+     res.send({
+         decrypted: await Medzy.Sound(req.params.prompt)
+     })
+ })
+
  app.listen(3001, () => {
      console.log("Good")
  })
