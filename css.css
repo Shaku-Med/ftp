@@ -1,0 +1,57 @@
+:root {
+    --mainBG: #000;
+    --mainCL: #fff;
+    --T: #151517;
+    color-scheme: dark;
+}
+
+body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--mainBG);
+    overflow: hidden;
+    /* cursor: grabbing; */
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.aindodnocda {
+    background: var(--T);
+}
+
+img {
+    background: var(--mainBG);
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+video {
+    object-fit: contain;
+    height: 200px;
+    width: 100%;
+}
+
+.fileaidnfdoa {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media (prefers-color-scheme: light) {
+     :root {
+        --mainBG: #ffffff;
+        --mainCL: #000000;
+        --T: #e0e0e0;
+        color-scheme: light;
+    }
+}
